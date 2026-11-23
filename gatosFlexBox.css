@@ -1,0 +1,44 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.galeria img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.galeria img {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 600px) {
+    .galeria img {
+        flex: 0 0 calc(50% - 4px);
+    }
+}
+
+@media (min-width: 840px) {
+    .galeria {
+        max-width: 916px;
+        margin: 0 auto;
+    }
+
+    .galeria img {
+        flex: 0 0 calc((100% - 16px) / 3);
+        max-width: 300px;
+    }
+}
